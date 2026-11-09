@@ -1,0 +1,99 @@
+ACESSO FÁCIL — VERSÃO SEM CUSTO PARA O PROJETO ACADÊMICO
+========================================================
+
+O QUE ESTA VERSÃO USA
+---------------------
+- HTML, CSS e JavaScript no site.
+- Node.js e Express para executar um pequeno servidor no seu computador.
+- API Gemini pelo Google AI Studio, com o nível gratuito e limites de uso.
+- Speech Synthesis do navegador para leitura em voz alta.
+
+CUSTO
+----
+Node.js e as ferramentas do projeto são gratuitos.
+Não é necessário contratar hospedagem nem comprar domínio: o site roda
+localmente no seu computador em http://localhost:3000.
+A API Gemini oferece nível gratuito para alguns modelos, com limites de
+uso que podem mudar. Este projeto usa gemini-3.6-flash, listado com
+entrada e saída gratuitas no nível gratuito na documentação consultada.
+
+MUITO IMPORTANTE:
+- Use somente o projeto/chave no nível gratuito.
+- NÃO clique em "Configurar faturamento", "Upgrade" ou equivalente.
+- NÃO vincule uma conta de cobrança nem adicione cartão.
+- Se a cota gratuita acabar, aguarde a renovação ou apresente a versão
+  demonstrativa/local. Não faça upgrade para continuar.
+- No nível gratuito, a documentação informa que o conteúdo enviado pode
+  ser usado pelo Google para melhorar os produtos. Por isso, use apenas
+  textos públicos ou fictícios; nunca envie senhas, documentos pessoais,
+  prontuários ou conteúdo confidencial.
+- Os limites e modelos disponíveis podem mudar. Confira a página oficial.
+
+COMO CONFIGURAR NO WINDOWS
+--------------------------
+1. Baixe o Node.js LTS no site oficial:
+   https://nodejs.org/pt-br/download
+   Escolha a versão LTS para Windows e instale com as opções padrão.
+2. Abra a pasta "acesso-facil" no Explorador de Arquivos.
+3. Na barra de endereço da pasta, digite cmd e pressione Enter.
+4. Copie ".env.example" e renomeie a cópia para ".env".
+   Confira se o nome final é exatamente .env, e não .env.txt.
+5. Acesse o Google AI Studio:
+   https://aistudio.google.com/
+6. Entre com sua Conta Google e procure a área de API keys / Chaves de API.
+7. Crie uma chave para o nível gratuito. Se a página oferecer configurar
+   faturamento ou fazer upgrade, NÃO faça isso. Não adicione cartão.
+8. Abra o arquivo ".env" no Bloco de Notas e cole a chave depois de
+   GEMINI_API_KEY=, sem aspas e sem espaços extras.
+9. Salve o arquivo.
+10. No terminal aberto dentro da pasta, execute:
+
+    npm install
+
+11. Depois execute:
+
+    npm start
+
+12. Abra no navegador:
+
+    http://localhost:3000
+
+Para encerrar o servidor, volte ao terminal e pressione Ctrl + C.
+
+SE A CHAVE GRATUITA NÃO ESTIVER DISPONÍVEL
+------------------------------------------
+Não pague nem configure faturamento. O site e os recursos de acessibilidade
+continuam funcionando, mas os recursos que chamam a IA ficarão indisponíveis.
+Podemos preparar uma demonstração com textos de exemplo e resultados
+preparados, deixando claro na apresentação que é uma simulação.
+
+FUNCIONALIDADES
+---------------
+- Simplificação de textos com Gemini.
+- Explicação de palavras e expressões com Gemini.
+- Aumentar e diminuir fonte.
+- Alto contraste.
+- Modo de leitura.
+- Leitura em voz alta pelo navegador.
+- Copiar o resultado.
+
+SEGURANÇA E LIMITES
+-------------------
+A chave fica no arquivo .env e é usada somente pelo servidor. Não a
+coloque em public/app.js, prints, mensagens, GitHub ou no ZIP compartilhado.
+O servidor limita o texto de entrada e a quantidade de chamadas para
+evitar uso excessivo. A IA pode cometer erros: confira informações
+importantes em fontes oficiais.
+
+ESTRUTURA
+---------
+acesso-facil/
+  public/
+    index.html
+    styles.css
+    app.js
+  server.js
+  package.json
+  .env.example
+  .gitignore
+  LEIA-ME.txt
